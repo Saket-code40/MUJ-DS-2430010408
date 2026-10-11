@@ -1,0 +1,271 @@
+{
+  "logistic_regression": {
+    "accuracy": 0.7877,
+    "precision": 0.6167,
+    "recall": 0.5286,
+    "f1": 0.5692
+  },
+  "nn_dropout": {
+    "accuracy": 0.7896,
+    "precision": 0.6343,
+    "recall": 0.4893,
+    "f1": 0.5524
+  },
+  "early_stopping": {
+    "best_epoch": 6,
+    "stopped_epoch": 14,
+    "patience": 8
+  },
+  "bias_variance_main": {
+    "train_accuracy": 0.8119,
+    "val_accuracy": 0.818
+  },
+  "bias_variance_underfit": {
+    "train_accuracy": 0.8064,
+    "val_accuracy": 0.8218
+  },
+  "bias_variance_overfit": {
+    "train_accuracy": 0.9667,
+    "val_accuracy": 0.7507,
+    "gap": 0.216
+  },
+  "cross_validation": {
+    "folds": [
+      {
+        "accuracy": 0.799,
+        "precision": 0.66,
+        "recall": 0.5038,
+        "f1": 0.5714,
+        "fold": 1
+      },
+      {
+        "accuracy": 0.7848,
+        "precision": 0.6263,
+        "recall": 0.4733,
+        "f1": 0.5391,
+        "fold": 2
+      },
+      {
+        "accuracy": 0.7978,
+        "precision": 0.6493,
+        "recall": 0.5229,
+        "f1": 0.5793,
+        "fold": 3
+      },
+      {
+        "accuracy": 0.7998,
+        "precision": 0.6633,
+        "recall": 0.4981,
+        "f1": 0.5689,
+        "fold": 4
+      },
+      {
+        "accuracy": 0.813,
+        "precision": 0.6974,
+        "recall": 0.5211,
+        "f1": 0.5965,
+        "fold": 5
+      }
+    ],
+    "summary": {
+      "accuracy": {
+        "mean": 0.7989,
+        "std": 0.01
+      },
+      "precision": {
+        "mean": 0.6593,
+        "std": 0.0258
+      },
+      "recall": {
+        "mean": 0.5038,
+        "std": 0.0202
+      },
+      "f1": {
+        "mean": 0.571,
+        "std": 0.0209
+      }
+    }
+  },
+  "nn_no_dropout": {
+    "accuracy": 0.7791,
+    "precision": 0.6146,
+    "recall": 0.45,
+    "f1": 0.5196
+  },
+  "nn_l1": {
+    "accuracy": 0.7877,
+    "precision": 0.6573,
+    "recall": 0.4179,
+    "f1": 0.5109,
+    "train_loss": 0.4178,
+    "val_loss": 0.4419
+  },
+  "nn_l2": {
+    "accuracy": 0.7886,
+    "precision": 0.6338,
+    "recall": 0.4821,
+    "f1": 0.5477,
+    "train_loss": 0.4122,
+    "val_loss": 0.4177
+  },
+  "ridge": {
+    "accuracy": 0.7791,
+    "precision": 0.6026,
+    "recall": 0.4929,
+    "f1": 0.5422
+  },
+  "lasso": {
+    "accuracy": 0.7839,
+    "precision": 0.6262,
+    "recall": 0.4607,
+    "f1": 0.5309
+  },
+  "lasso_zeroed_features": [
+    "gender_Female",
+    "gender_Male",
+    "Partner_No",
+    "Partner_Yes",
+    "PhoneService_No",
+    "PhoneService_Yes",
+    "MultipleLines_No phone service",
+    "MultipleLines_Yes",
+    "InternetService_DSL",
+    "InternetService_No",
+    "OnlineSecurity_No internet service",
+    "OnlineSecurity_Yes",
+    "OnlineBackup_No internet service",
+    "OnlineBackup_Yes",
+    "DeviceProtection_No",
+    "DeviceProtection_No internet service",
+    "DeviceProtection_Yes",
+    "TechSupport_No internet service",
+    "TechSupport_Yes",
+    "StreamingTV_No",
+    "StreamingTV_No internet service",
+    "StreamingMovies_No",
+    "StreamingMovies_No internet service",
+    "Contract_Two year",
+    "PaymentMethod_Bank transfer (automatic)",
+    "PaymentMethod_Credit card (automatic)",
+    "PaymentMethod_Mailed check"
+  ],
+  "confusion_matrix": {
+    "TN": 696,
+    "FP": 79,
+    "FN": 143,
+    "TP": 137
+  },
+  "final_table": [
+    {
+      "Model/Experiment": "Logistic Regression",
+      "Accuracy": 0.7877,
+      "Precision": 0.6167,
+      "Recall": 0.5286,
+      "F1": 0.5692
+    },
+    {
+      "Model/Experiment": "Neural Network (no dropout)",
+      "Accuracy": 0.7791,
+      "Precision": 0.6146,
+      "Recall": 0.45,
+      "F1": 0.5196
+    },
+    {
+      "Model/Experiment": "Neural Network + Dropout",
+      "Accuracy": 0.7896,
+      "Precision": 0.6343,
+      "Recall": 0.4893,
+      "F1": 0.5524
+    },
+    {
+      "Model/Experiment": "Neural Network + L1",
+      "Accuracy": 0.7877,
+      "Precision": 0.6573,
+      "Recall": 0.4179,
+      "F1": 0.5109
+    },
+    {
+      "Model/Experiment": "Neural Network + L2",
+      "Accuracy": 0.7886,
+      "Precision": 0.6338,
+      "Recall": 0.4821,
+      "F1": 0.5477
+    },
+    {
+      "Model/Experiment": "Ridge (linear)",
+      "Accuracy": 0.7791,
+      "Precision": 0.6026,
+      "Recall": 0.4929,
+      "F1": 0.5422
+    },
+    {
+      "Model/Experiment": "Lasso (linear)",
+      "Accuracy": 0.7839,
+      "Precision": 0.6262,
+      "Recall": 0.4607,
+      "F1": 0.5309
+    }
+  ],
+  "feature_names": [
+    "tenure",
+    "MonthlyCharges",
+    "TotalCharges",
+    "gender_Female",
+    "gender_Male",
+    "SeniorCitizen_0",
+    "SeniorCitizen_1",
+    "Partner_No",
+    "Partner_Yes",
+    "Dependents_No",
+    "Dependents_Yes",
+    "PhoneService_No",
+    "PhoneService_Yes",
+    "MultipleLines_No",
+    "MultipleLines_No phone service",
+    "MultipleLines_Yes",
+    "InternetService_DSL",
+    "InternetService_Fiber optic",
+    "InternetService_No",
+    "OnlineSecurity_No",
+    "OnlineSecurity_No internet service",
+    "OnlineSecurity_Yes",
+    "OnlineBackup_No",
+    "OnlineBackup_No internet service",
+    "OnlineBackup_Yes",
+    "DeviceProtection_No",
+    "DeviceProtection_No internet service",
+    "DeviceProtection_Yes",
+    "TechSupport_No",
+    "TechSupport_No internet service",
+    "TechSupport_Yes",
+    "StreamingTV_No",
+    "StreamingTV_No internet service",
+    "StreamingTV_Yes",
+    "StreamingMovies_No",
+    "StreamingMovies_No internet service",
+    "StreamingMovies_Yes",
+    "Contract_Month-to-month",
+    "Contract_One year",
+    "Contract_Two year",
+    "PaperlessBilling_No",
+    "PaperlessBilling_Yes",
+    "PaymentMethod_Bank transfer (automatic)",
+    "PaymentMethod_Credit card (automatic)",
+    "PaymentMethod_Electronic check",
+    "PaymentMethod_Mailed check"
+  ],
+  "top_logreg_coefficients": {
+    "tenure": -1.4354,
+    "Contract_Two year": -0.7377,
+    "TotalCharges": 0.7226,
+    "Contract_Month-to-month": 0.5733,
+    "InternetService_DSL": -0.5617,
+    "InternetService_Fiber optic": 0.5447,
+    "MonthlyCharges": -0.4562,
+    "PaperlessBilling_No": -0.3028,
+    "MultipleLines_No": -0.2942,
+    "Dependents_Yes": -0.2744,
+    "InternetService_No": -0.2633,
+    "OnlineSecurity_No internet service": -0.2633
+  }
+}
